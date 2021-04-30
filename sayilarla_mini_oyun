@@ -1,0 +1,33 @@
+import random
+
+sayı= random.randint(1,10)
+hak =int(input("kaç kez denemek istersiniz?: "))
+can =hak
+sayac=0
+
+
+puan=100-((100/can)*(sayac-1))
+if puan > 100:
+    puan=100
+
+
+
+while hak>0:
+    hak-=1
+    sayac+=1
+
+    tahmin = int(input(f"tahmin: "))
+
+
+    if sayı==tahmin:
+        print(f"tebriklerr!!{sayac}. defada bildiniz. Toplam: {puan}")
+        break
+
+    elif sayı>tahmin:
+        print("yukarı")
+
+    else :
+        print("aşağı")
+
+    if hak==0:
+        print(f"hakkınız biti..tutulan sayı:{sayı}")
