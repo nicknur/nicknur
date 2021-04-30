@@ -1,0 +1,22 @@
+import os
+
+for klasör_yolu,klasör_isimleri,dosya_isimleri in os.walk("C:/Users/admin/Desktop"):
+    for i in dosya_isimleri:
+        if (i.endswith(".pdf")):
+            with open("pdf_dosyalari.txt","a",encoding="utf-8") as file:
+                
+                file.write("Current Path:"+klasör_yolu+"\n"+"Directories"+str(klasör_isimleri[:])+"\n"+"Dosyalar:"+i+"\n"+"-----------------------"+"\n")
+                for v in klasör_isimleri :
+                    file.write(v)
+
+        elif (i.endswith("mp4")):
+            with open("mp4_dosyaları.txt","a",encoding="utf-8") as file:
+                
+                file.write("Current Path:"+klasör_yolu+"\n"+"Directories"+str(klasör_isimleri[:])+"\n"+"Dosyalar:"+i+"\n"+"-----------------------"+"\n")
+                for v in klasör_isimleri :
+                    file.write(v)
+
+        elif (i.endswith("txt")):
+            with open("txt_dosyaları.txt","a",encoding="utf-8") as file:
+                
+                file.write("Current Path:"+klasör_yolu+"\n"+"Directories"+str(klasör_isimleri[:])+"\n"+"Dosyalar:"+i+"\n"+"-----------------------"+"\n")
